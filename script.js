@@ -1,20 +1,7 @@
-// const imgs = document.getElementById("img");
-// const img = document.querySelectorAll("#img img");
-
-// let idx = 0;
-// const imgWidth = img[0].clientWidth;
-
-// function carrossel(){
-
-//     imgs.style.transform = `translateX(${-idx * imgWidth}px)`;
-//     idx++;
-
-//     if(idx > img.length - 1) {
-//         idx = 0;
-//     }
-// }
-
-// setInterval(carrossel, 4000);
+window.addEventListener('scroll', function(){
+    let header = this.document.querySelector('#header')
+    header.classList.toggle('rolagem', window.scrollY > 700)
+})
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -43,3 +30,5 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-scrollbar',
     },
   });
+
+  

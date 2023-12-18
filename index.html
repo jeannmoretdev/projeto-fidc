@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="./style.css"/>
     <link rel="icon" href="./assets/logo-M.ico"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>    
-    <script src="./script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="hero-container">
-        <header>
+        <header id="header">
             <img class="logo" alt="logo" src="./assets/logo-M.png" />
             <nav>
                 <ul>
@@ -23,6 +22,8 @@
                 </ul>
             </nav>
         </header>
+        <script src="./script.js" defer></script>
+
         <div class="card-background"> 
             <h1>Moret Capital</h1>
         </div>
@@ -44,7 +45,7 @@
                     <div class="about-us-card">
                         <image class="about-us-image" src="./assets/experiencia.png" />
                         <p class="about-us-text">
-                            Experiência Comprovada: Com uma sólida história no setor financeiro, somos especialistas em entender as necessidades individuais de nossos clientes.
+                            <span class="title-span">Experiência Comprovada:</span> Com uma sólida história no setor financeiro, somos especialistas em entender as necessidades individuais de nossos clientes.
                         </p>
                     </div>
                 </div>
@@ -52,7 +53,7 @@
                     <div class="about-us-card card-reverse">
                         <image class="about-us-image image-reverse" src="./assets/inovacao.png" />
                         <p class="about-us-text">
-                            Inovação Constante: Abraçamos a inovação para oferecer soluções financeiras adaptadas aos desafios contemporâneos, mantendo-nos à frente das tendências do mercado.
+                            <span class="title-span">Inovação Constante:</span> Abraçamos a inovação para oferecer soluções financeiras adaptadas aos desafios contemporâneos, mantendo-nos à frente das tendências do mercado.
                         </p>
                     </div>
                 </div>
@@ -60,22 +61,9 @@
                     <div class="about-us-card">
                         <image class="about-us-image" src="./assets/compromisso.png" />
                         <p class="about-us-text">
-                            Compromisso com a Transparência: Valorizamos a confiança e mantemos a transparência em todos os aspectos, desde taxas até processos, para que você possa tomar decisões financeiras informadas.
+                            <span class="title-span">Compromisso com a Transparência:</span> Valorizamos a confiança e mantemos a transparência em todos os aspectos, desde taxas até processos, para que você possa tomar decisões financeiras informadas.
                         </p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content-container">
-        <div class="services">
-            <div class="carrossel-container">
-                <div class="carrossel-content" id="img">
-                    <img src="./assets/carrossel-1.png" alt="">
-                    <img src="./assets/carrossel-2.png" alt="">
-                    <img src="./assets/carrossel-3.png" alt="">
-                    <img src="./assets/carrossel-4.png" alt="">
-                    <img src="./assets/carrossel-5.png" alt="">
                 </div>
             </div>
         </div>
@@ -117,8 +105,7 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
               
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                
               </div>
         </div>
     </div>

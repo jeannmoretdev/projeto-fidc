@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
+    
 }
 
 html {
@@ -27,15 +28,17 @@ html {
 }
 
 header {
-    width: 96%;
+    width: 100%;
     height: auto;
     position: fixed;
     display: flex;
     align-items:center;
     justify-content: space-evenly;
-    padding: 30px 4%;
+    padding: 60px 4%;
     top: 0;
     left: 0;
+    transition: .5s;
+    z-index: 2;
    
 }
 
@@ -63,6 +66,11 @@ li:hover {
     color:#d870db
 }
 
+header.rolagem {
+    background-color: black;
+    padding: 0;
+}
+
 .card-background {
     width: auto;
     border-radius: 8px;
@@ -70,7 +78,7 @@ li:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 .card-background-span {
     width: auto;
@@ -110,6 +118,7 @@ li:hover {
 
 .content-container {
     height: 100vh;
+    max-height: 100vh;
 }
 
 
@@ -124,9 +133,7 @@ li:hover {
 .arrows {
     width: 60px;
     height: 172px;
-    bottom: 20px;
-    margin-left: 45%;
-    margin-top: 40%;
+    
 }
 
 .arrows path {
@@ -234,6 +241,11 @@ li:hover {
     text-align: justify;
     font-size: 1.09rem;
     font-family: 'Montserrat', sans-serif;
+    
+}
+.title-span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .services {
@@ -250,26 +262,12 @@ li:hover {
     background-color: white;
     padding-top: 100px;
 }
-.carrossel-container {
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 500px;
-    height: 500px;
-    
-   
-}
-.carrossel-content {
-    display: flex;
-    transition: transform 0.8s ease-in-out;
-    transform: translateX(0);
-}
 
-carrossel-content .img {
-    object-fit: cover;
-    width: 500px;
-    height: 500px;
-    
+.services h1 {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    height: auto;
 }
 
 .swiper {
@@ -282,5 +280,67 @@ carrossel-content .img {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px){
+    nav{
+        display: none;
+    }
+    
+
+    .logo {
+        width: 250px;
+        height: 150px;
+        background-color: transparent;
+        border-radius: 50%;
+        
+    }
+    .hero-container {
+        min-width: 100%;
+    }
+    .about-us-container {
+        box-sizing: border-box;
+    }
+    .about-us-content {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(1fr, 3);
+        padding: 0 20px;
+        
+    }
+    .about-us-card {
+        width: 90%;
+        height: auto;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .about-us-image {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        right: 50px;       
+        
+    }
+    .image-reverse {
+        left: 50px;
+    }
+    .about-us-text {
+        color: #3B3E3D;
+        font-family: sans-serif;
+        text-align: justify;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
 }
