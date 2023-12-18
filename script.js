@@ -10,14 +10,12 @@ const swiper = new Swiper('.swiper', {
     cssMode: true,
     spaceBetween: 30,
     autoplay: {
-        delay: 3200,
+        delay: 4000,
         disabledOnInteraction: false,
     },
   
     // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
+  
   
     // Navigation arrows
     navigation: {
