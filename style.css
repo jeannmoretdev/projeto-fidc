@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
-    margin: 0;   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .hero-container {
@@ -12,29 +19,36 @@
     justify-content: space-between;
     background-image: url('./assets/cenario-de-construcao-de-negocios-modernos-tocando-o-ceu.jpg');
     background-attachment: fixed;
-    background-position: center;
+    background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 10px;
+    
 }
 
 header {
-    width: 100%;
+    width: 96%;
+    height: auto;
     position: fixed;
     display: flex;
-    align-items: center;
-    margin-left: -20px;
+    align-items:center;
+    justify-content: space-evenly;
+    padding: 30px 4%;
+    top: 0;
+    left: 0;
+   
 }
 
 nav {
-    width: 100vh;
+    width: 90%;
 }
 
 ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    width: 100%;
+    width: auto;
+    height: auto;
 }
 
 li {
@@ -49,49 +63,55 @@ li:hover {
     color:#d870db
 }
 
-.text-container {
-    width: 100%;
-    height: auto;
-    
+.card-background {
+    width: auto;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.card-background-span {
+    width: auto;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.text {
+
+.card-background h1 {
+    color: #3B3E3D;
+    font-size: 60px;
+    text-align: center;
+    width: auto;
+    padding: 10px 10px;
+}
+
+.welcome-span{
     display: flex;
-    flex-direction: column;
     color: #3B3E3D;
     font-size: 30px;
-    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    width: auto;
+    padding: 10px 4px;
 }
 
 .logo {
-    width: 120px;
-    height: auto;
-}
-
-.card-background {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 180px;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-align: center;
+    width: 10%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    
 }
 
 .content-container {
     height: 100vh;
 }
 
-.card-background-span {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 150px;
-    background-color: rgba(255, 255, 255, 0.6);
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.welcome-span {
-    font-size: 28px;
-}
 
 .copy {
     font: 500;
@@ -155,7 +175,7 @@ li:hover {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -168,11 +188,13 @@ li:hover {
     height: 80%;
     display: grid;
     grid-template-rows: repeat(1fr, 3);
+    padding-top: 60px;
 }
 
 .position-container {
     width: 100%;
     display: flex;
+    padding: 0;
 }
 
 .right {
@@ -185,15 +207,14 @@ li:hover {
 
 .image-reverse {
     left: 20px;
-    width: 150px;
 }
 
 .card-reverse {
     flex-direction: row-reverse;
 }
 .about-us-card {
-    width: 500px;
-    height: 250px;
+    width: 70%;
+    height: auto;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -213,4 +234,53 @@ li:hover {
     text-align: justify;
     font-size: 1.09rem;
     font-family: 'Montserrat', sans-serif;
+}
+
+.services {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    padding-top: 100px;
+}
+.carrossel-container {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    
+   
+}
+.carrossel-content {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    transform: translateX(0);
+}
+
+carrossel-content .img {
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+    
+}
+
+.swiper {
+    height: auto;
+    width: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 }
