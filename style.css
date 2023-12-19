@@ -13,17 +13,16 @@ html {
 }
 
 .hero-container {
-    height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-image: url('./assets/cenario-de-construcao-de-negocios-modernos-tocando-o-ceu.jpg');
     background-attachment: fixed;
-    background-position:center;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 10px;
+    background-size: cover;   
     
 }
 
@@ -35,11 +34,15 @@ header {
     align-items:center;
     justify-content: space-evenly;
     padding: 60px 4%;
+    padding-top: 20px;
     top: 0;
     left: 0;
     transition: .5s;
     z-index: 2;
-   
+}
+
+header nav ul a {
+    text-decoration: none;
 }
 
 nav {
@@ -48,7 +51,7 @@ nav {
 
 ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     list-style: none;
     width: auto;
     height: auto;
@@ -56,7 +59,7 @@ ul {
 
 li {
     font-family: 'Oswald', sans-serif;
-    font-size: 27px;
+    font-size: 30px;
     cursor: pointer;
     color: aliceblue;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -83,7 +86,8 @@ header.rolagem .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 15%;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 .card-background-span {
     width: auto;
@@ -93,6 +97,7 @@ header.rolagem .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 
@@ -114,10 +119,8 @@ header.rolagem .logo {
 }
 
 .logo {
-    width: 10%;
-    height: 10%;
-    background-color: black;
-    border-radius: 50%;
+    width: 150px;
+    height: 125px;
     
 }
 
@@ -138,6 +141,7 @@ header.rolagem .logo {
 .arrows {
     width: 60px;
     height: 172px;
+    cursor: pointer;
     
 }
 
@@ -230,13 +234,17 @@ header.rolagem .logo {
     border-radius: 8px;
     display: flex;
     align-items: center;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-color: #cfa461;
 }
 
 .about-us-image {
     width: 150px;
     height: 150px;
     position: relative;
-    right: 30px;       
+    right: 30px;
     
 }
 
@@ -257,45 +265,159 @@ header.rolagem .logo {
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: white;
+    justify-content: center;
     padding-top: 100px;
 }
 
-.services h1 {
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-    height: auto;
-}
 
 .swiper {
     height: 400px;
-    width: 100%
+    min-width: 500px;
+    width: 500px;
   }
 
 .swiper-slide {
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-    height: 400px;
-    width: 400px;
+    width: 500px;
 }   
+
+.slide-img {
+    height: 400px;
+    width: 500px;
+     
+}
 
 .slide-img img {
     height: 400px;
     width: 400px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-color: #cfa461;
+    border-radius: 8px;
+
+    
+}
+
+.bloco-services {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.services-container  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-color: #cfa461;    
+    padding: 20px 10px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.services-container:hover .services-content i{
+    color: white;
+    scale: 1.2;
+}
+
+.services-container:hover .services-content h3{
+    color: white;
+    scale: 1;
+}
+.services-container:hover .services-content p {
+    color: white;
+    scale: 1;
+}
+.services-container:hover .services-content .hidden-icon #hidden-hands-icon {
+    scale: 1.2;
+    opacity: 1;
+}
+.services-container:hover .services-content .hidden-icon #hidden-pigg-icon {
+    scale: 1.2;
+    opacity: 1;
+}
+.services-container::before {
+    content: "";
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 100%;
+    background-color: #cfa461;
+}
+
+.services-container:hover::before{
+    animation: desloca .5s;
+    bottom: 30%;
+
+}
+
+@keyframes desloca {
+    0%{
+        bottom: 100%;
+    }
+    50% {
+        bottom: 25%;
+    }
+    75%{
+        bottom: -10%;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+
+.services-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;    
 }
 
 
+.services-content i {
+    font-size: 80px;
+    color: #cfa461;
+    padding: 10px 0;
+    margin-top: 100px;
+}
+
+
+.services-content h3, p {
+    color: #3B3E3D;
+    text-align: center;
+    margin-top: 10px;
+}
+.services-content p{
+    padding: 0 30px;
+}
+
+#hidden-hands-icon {
+   font-size: 200px;
+   margin-left: 250px;
+   opacity: 0;
+   color: #3B3E3D;
+}
+
+#hidden-pigg-icon {
+    font-size: 200px;
+    margin-left: 250px;
+    color: #3B3E3D;
+    opacity: 0;
+}
+.titulo-service {
+    margin-top: 300px;
+}
 footer {
     display: flex;
     justify-content: center;
@@ -320,6 +442,7 @@ footer {
         height: 150px;
         background-color: transparent;
         border-radius: 50%;
+        padding-top: 20px;
         
     }
     .hero-container {
@@ -364,6 +487,7 @@ footer {
     .swiper {
         height: auto;
         width: 100%;
+        
       }
     
     .swiper-slide {
@@ -376,5 +500,6 @@ footer {
     .slide-img img {
         height: 350px;
         width: 350px;
+        
     }
 }

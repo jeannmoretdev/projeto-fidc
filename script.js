@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function(){
     let header = this.document.querySelector('#header')
-    header.classList.toggle('rolagem', window.scrollY > 700)
+    header.classList.toggle('rolagem', window.scrollY > 650)
 })
 
 const swiper = new Swiper('.swiper', {
