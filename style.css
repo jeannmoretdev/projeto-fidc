@@ -128,6 +128,9 @@ header.rolagem .logo {
     height: 100vh;
     max-height: 100vh;
 }
+.content-container2 {
+    height: 100svh;
+}
 
 
 .copy {
@@ -297,23 +300,20 @@ header.rolagem .logo {
     border-radius: 0px 0px 0px 0px;
     border-color: #cfa461;
     border-radius: 8px;
-
-    
 }
 
 .bloco-services {
     display: flex;
     width: 60%;
-    justify-content: space-around;
+    justify-content: space-around;   
 }
-
 .services-container  {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 400px;
-    width: 400px;
+    width: 300px;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
     border-style: solid;
     border-width: 0px 0px 3px 0px;
@@ -324,12 +324,12 @@ header.rolagem .logo {
     position: relative;
     overflow: hidden;
 }
-.services-container:hover .services-content i{
+.services-container:hover .services-content i {
     color: white;
     scale: 1.2;
 }
 
-.services-container:hover .services-content h3{
+.services-container:hover .services-content h3 {
     color: white;
     scale: 1;
 }
@@ -381,12 +381,13 @@ header.rolagem .logo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;    
+    padding: 0px;
+    width: 300px;
 }
 
 
 .services-content i {
-    font-size: 80px;
+    font-size: 70px;
     color: #cfa461;
     padding: 10px 0;
     margin-top: 100px;
@@ -415,13 +416,17 @@ header.rolagem .logo {
     color: #3B3E3D;
     opacity: 0;
 }
-.titulo-service {
-    margin-top: 300px;
-}
+
 footer {
+    width: 100%;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: static;
+    bottom: 0;
+    z-index: 1;
+    background-color: black;
 }
 
 @media (max-width: 768px){
@@ -486,9 +491,12 @@ footer {
     }
     .swiper {
         height: auto;
-        width: 100%;
-        
-      }
+        width: 400px;   
+    }
+
+    .swiper-wrapper{
+        width: 350px;
+    }
     
     .swiper-slide {
         text-align: center;
@@ -496,10 +504,45 @@ footer {
         align-items: center;
         justify-content: center;
         margin-bottom: 8px;
+        width: 350px;
     }
     .slide-img img {
         height: 350px;
         width: 350px;
+    }
+
+    .bloco-services {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .services {
+        display: flex;
+        flex-direction: column;
         
     }
+    #hidden-pigg-icon, #hidden-hand-icon {
+        display: none;
+    }
+    .services {
+        height: 200vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        
+    }
+
+    .services-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        
+    }
+    .content-container2 {
+        height: 200svh;
+    }
+    
+    
 }
