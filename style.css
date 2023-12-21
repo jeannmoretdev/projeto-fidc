@@ -450,6 +450,10 @@ footer p {
         min-width: 100%;
         padding: 0 30px;
     }
+
+    .card-background {
+        margin-top: 150px;
+    }
     .about-us-container {
         box-sizing: border-box;
     }
@@ -511,7 +515,7 @@ footer p {
     .bloco-services {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 85%;
     }
     .services {
         display: flex;
