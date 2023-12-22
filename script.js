@@ -29,4 +29,50 @@ const swiper = new Swiper('.swiper', {
     },
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const telefoneInput = document.getElementById("telefone");
+    const cnpjInput = document.getElementById("cnpj");
   
+    telefoneInput.addEventListener("input", function (event) {
+      formatTelefone(event);
+    });
+  
+    cnpjInput.addEventListener("input", function (event) {
+      formatCNPJ(event);
+    });
+  });
+
+
+  function formatTelefone(event) {
+    let inputNumber = event.target.value.replace(/\D/g, "");
+
+    let formattedNumber = "";
+    for (let i = 0; i < inputNumber.length; i++) {
+      if (i === 0) formattedNumber += "("
+      if (i === 2) formattedNumber += ") ";
+      if (i === 7) formattedNumber += "-";
+      formattedNumber += inputNumber[i];
+
+    }
+
+    event.target.value = formattedNumber;
+
+  }
+
+  function formatCNPJ(event) {
+    let inputCNPJ = event.target.value.replace(/\D/g, "");
+    let formattedCnpj = '';
+
+    formattedCnpj = "";
+    for (let i = 0; i < inputCNPJ.length; i++) {
+      if (i === 2 )formattedCnpj +=".";
+      if (i === 5 )formattedCnpj +=".";
+      if (i === 8 )formattedCnpj +="/";
+      if (i === 12 )formattedCnpj +="-";
+      formattedCnpj += inputCNPJ[i];
+    }
+
+    event.target.value = formattedCnpj
+
+  }
+ 
