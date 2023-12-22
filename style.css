@@ -127,7 +127,6 @@ header.rolagem .logo {
 .content-container {
     height: 100vh;
     max-height: 100vh;
-    padding: 0 30px;
 }
 .content-container2 {
     height: 100svh;
@@ -184,24 +183,27 @@ header.rolagem .logo {
 .about-us-container {
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #E4E6E6;
+    padding: 0 20px;
 }
 
 .about-us-content {
     width: 100%;
     display: grid;
     grid-template-rows: repeat(1fr, 3);
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 .position-container {
     width: 95%;
     display: flex;
-    padding: 0 10px;
 }
 
 .right {
@@ -408,12 +410,14 @@ header.rolagem .logo {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
     
 }
 
 .contact-us-text {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -444,8 +448,7 @@ header.rolagem .logo {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    width: 40%;
-    min-height: 300px;
+    width: 100%;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
     border-style: solid;
     border-width: 0px 0px 3px 0px;
@@ -486,7 +489,14 @@ input {
     border: #cfa461;
     border-radius: 2px;
     cursor: pointer;
+    font-size: 21px;
+    
 }
+
+.button-contact i {
+    margin-right: 10px;
+}
+
 .button-contact:hover {
     background-color: #d870db;
     color: #3B3E3D;
@@ -497,25 +507,128 @@ label {
     font-size: 15px;
 }
 
-footer {
-    width: 100%;
-    height: 150px;
+.find-us-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    position: static;
-    bottom: 0;
-    z-index: 1;
-    background-color: black;
-    position: absolute;
-    bottom: auto;
+    column-gap: 20px;
+    width: 100%;
+    padding: 0 20px;
 }
 
-footer p {
-    color: #E4E6E6;
+.find-us-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border-color: #cfa461;
+    z-index: 1;
+}
+.find-us-content h6 {
+    color: #cfa461;
+    font-size: 18px;
+    font-weight: 100;
+}
+.find-us-divisoria {
+    height: 5px;
+    width: 20%;
+    border-radius: 2px;
+    background-color: #cfa461;
+}
+.find-us-content h2 {
+    font-size: 21px;
     
 }
+.icons {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-top: 30px;
+}
 
+.icons i {
+    font-size: 25px;
+    padding: 25px;
+    background-color: #cfa461;
+    color: #E4E6E6;
+    border-radius: 50%;
+    transition: transform .3s;
+}
+
+.icons i:hover {
+    background-color: #d870db;
+    transform: scale(1.2);
+}
+
+
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    column-gap: 30px;
+    justify-content: first baseline;
+    padding-left: 30px;
+
+}
+
+
+.footer-divisoria {
+    background-color: #e4e6e661;
+    height: auto;
+    width: 2px;
+    border: none;
+}
+.institucional{
+    display: flex;
+    flex-direction: column;
+    color: #E4E6E6;
+    row-gap: 20px;
+}
+.institucional a {
+    text-decoration: none;
+    color: #E4E6E6;
+}
+.contato {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    color: #E4E6E6;
+
+}
+.contato a {
+    text-decoration: none;
+    color: #E4E6E6;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+}
+.contato a:hover {
+    color: #d870db;
+}
+.institucional a:hover {
+    color: #d870db;
+}
+.whatsapp-desktop {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    
+}
+.whatsapp-mobile {
+    display: none;
+}
 
 @media (width < 768px){
     
@@ -532,12 +645,9 @@ footer p {
     }
 
     .logo {
-        width: 250px;
-        height: 150px;
-        background-color: transparent;
-        border-radius: 50%;
-        padding: 30px;
-        margin-top: 50px;
+        margin-top: 25px;
+        
+        
         
     }
     .hero-container {
@@ -650,7 +760,14 @@ footer p {
     .contact-us-container {
         display: flex;
         flex-direction: column;
-              
+        height: auto;
+        padding: 0;
+    }
+
+    .contact-us-text{
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
     .input-container {
         min-width: 90%;
@@ -663,7 +780,39 @@ footer p {
         width: 80%;
         padding-top: 40%;
     }
+    .find-us-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        margin-top: 150px;
 
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .whatsapp-desktop {
+        display: none;
+    }
+    .whatsapp-mobile {
+       display: block;
+       height: 50px;
+       width: 50px;
+       margin: 10px 0;
+    }
+    .contato {
+        margin-bottom: 30px;
+    }
+    .institucional {
+        margin-bottom: 30px;
+        margin-top: 30px;
+
+    }
+   
+
+    
 }
 
 
