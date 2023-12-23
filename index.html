@@ -13,13 +13,19 @@
 <body>
     <div class="hero-container" id="home">
         <header id="header">
-            <a href="#home"><img class="logo" alt="logo" src="./assets/logo-M.png"/></a>            
+            <div>
+                <a href="#home"><img class="logo" alt="logo" src="./assets/logo-M.png"/></a>            
+            </div>
+
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                
+            </button>
             <nav>
-                <ul>
-                    <a href="#home"><li>Home</li></a>
-                    <a href="#about-us"><li>Sobre nós</li></a>
-                    <a href="#services"><li>Nossos Serviços</li></a>
-                    <a href="#contact"><li>Contato</li></a>
+                <ul class="primary-navigation" id="primary-navigation" data-visible="false">
+                    <a href="#home"><li><span class="first-letter">H</span>ome</li></a>
+                    <a href="#about-us"><li><span class="first-letter">S</span>obre nós</li></a>
+                    <a href="#services"><li><span class="first-letter">N</span>ossos Serviços</li></a>
+                    <a href="#contact"><li><span class="first-letter">C</span>ontato</li></a>
  
                 </ul>
             </nav>
