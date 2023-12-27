@@ -513,9 +513,10 @@ label {
 
 .find-us-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    column-gap: 20px;
+    gap: 50px;
+    margin-bottom: 30px;
     width: 100%;
     padding: 0 20px;
 }
@@ -666,11 +667,11 @@ footer {
 
     }
     .primary-navigation span {
-        color: #cfa461;
+        color: #fff;
         font-weight: 800;
     }
     .primary-navigation li {
-        color: #3B3E3D;
+        color: #fff;
         font-weight: 600;
     }
 
@@ -825,8 +826,9 @@ footer {
     .find-us-container {
         display: flex;
         flex-direction: column;
-        row-gap: 30px;
         margin-top: 150px;
+        margin-bottom: 30px;
+        gap: 30px;
 
     }
     footer {
